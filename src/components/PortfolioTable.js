@@ -44,9 +44,9 @@ const PortfolioTable = ({
             return (
               <tr key={coin}>
                 <td>{coin}</td>
-                <td>{currentQuantity?.toFixed(5)}</td>
-                <td>{avgPrice?.toFixed(2)}</td>
-                <td>{currentPrice?.toFixed(2)}</td>
+                <td>{currentQuantity}</td>
+                <td>{avgPrice}</td>
+                <td>{currentPrice}</td>
                 <td>
                   <p className={profitLoss >= 0 ? "profit" : "loss"}>
                     {profitLoss >= 0 ? <FaCheck /> : <FaTimes />}

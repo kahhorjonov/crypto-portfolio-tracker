@@ -21,7 +21,7 @@ export const fetchPortfolio = async (token) => {
 
 export const addTransaction = async (coin, type, quantity, price, token) => {
   return api.post(
-    `/portfolio/${coin}`,
+    `/portfolio/transaction/${coin}`,
     { type, quantity, price },
     {
       headers: { Authorization: `Bearer ${token}` },
@@ -38,7 +38,7 @@ export const updateTransaction = async (
   token
 ) => {
   return api.put(
-    `/portfolio/${coin}/${id}`,
+    `/portfolio/transaction/${coin}/${id}`,
     { type, quantity, price },
     {
       headers: { Authorization: `Bearer ${token}` },
@@ -47,7 +47,7 @@ export const updateTransaction = async (
 };
 
 export const deleteTransaction = async (coin, id, token) => {
-  return api.delete(`/portfolio/${coin}/${id}`, {
+  return api.delete(`/portfolio/transaction/${coin}/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
