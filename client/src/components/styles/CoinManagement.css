@@ -1,0 +1,52 @@
+.coin-management {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-management input {
+  width: 400px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.coin-management button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coin-management button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .coin-management {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .coin-management input {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+  }
+
+  .coin-management button {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+  }
+}

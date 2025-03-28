@@ -24,204 +24,37 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.coin-management {
-  margin-bottom: 20px;
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  /* gap: 10px; */
-}
-
-.coin-management input {
-  width: 400px;
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-}
-
-.coin-management button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  background-color: #28a745;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.coin-management button:hover {
-  background-color: #218838;
-}
-
-table {
   width: 100%;
-  border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
   margin-bottom: 20px;
 }
 
-th,
-td {
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9rem;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-th {
-  background: rgba(255, 255, 255, 0.2);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-button {
-  padding: 8px 12px;
-  margin: 0 3px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
+.username {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-button:hover {
-  transform: scale(1.05);
-}
-
-.buy-btn {
-  background-color: #28a745;
-}
-
-.buy-btn:hover {
-  background-color: #218838;
-}
-
-.sell-btn {
+.logout-btn {
   background-color: #dc3545;
 }
 
-.sell-btn:hover {
+.logout-btn:hover {
   background-color: #c82333;
-}
-
-.history-btn {
-  background-color: #ffc107;
-  color: #333;
-}
-
-.history-btn:hover {
-  background-color: #e0a800;
-}
-
-.remove-btn {
-  background-color: #6c757d;
-}
-
-.remove-btn:hover {
-  background-color: #5a6268;
-}
-
-.profit {
-  color: #28a745;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.actions {
-  display: flex;
-}
-
-.loss {
-  color: #dc3545;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.total-profit-loss {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 1000px;
-}
-
-.total-profit-loss h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #333;
-  min-width: 400px;
-  max-width: 800px;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.modal-content h2 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-.modal-content input {
-  display: block;
-  margin: 15px auto;
-  padding: 10px;
-  width: 80%;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.modal-content button {
-  margin: 10px;
-}
-
-.actions-button {
-  display: flex;
-  justify-content: center;
-}
-
-.action-button {
-  color: black;
 }
 
 @media (max-width: 768px) {
@@ -229,30 +62,22 @@ button:hover {
     padding: 20px 10px;
   }
 
-  table {
-    font-size: 0.8rem;
+  .header {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  th,
-  td {
-    padding: 10px;
+  .user-info {
+    flex-direction: column;
+    gap: 5px;
   }
 
-  button {
-    padding: 6px 8px;
-    font-size: 0.75rem;
+  .username {
+    font-size: 0.9rem;
   }
 
-  .coin-management input {
-    width: 150px;
-  }
-
-  .coin-management button {
-    padding: 8px 15px;
-  }
-
-  .modal-content {
-    width: 90%;
-    padding: 20px;
+  .logout-btn {
+    width: 100%;
+    max-width: 300px;
   }
 }

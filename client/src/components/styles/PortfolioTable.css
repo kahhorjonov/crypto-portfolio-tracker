@@ -1,0 +1,145 @@
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button {
+  padding: 8px 12px;
+  margin: 0 3px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.buy-btn {
+  background-color: #28a745;
+}
+
+.buy-btn:hover {
+  background-color: #218838;
+}
+
+.sell-btn {
+  background-color: #dc3545;
+}
+
+.sell-btn:hover {
+  background-color: #c82333;
+}
+
+.history-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.history-btn:hover {
+  background-color: #e0a800;
+}
+
+.remove-btn {
+  background-color: #6c757d;
+}
+
+.remove-btn:hover {
+  background-color: #5a6268;
+}
+
+.profit {
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.loss {
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.total-profit-loss {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.total-profit-loss h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+
+  button {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+
+  .total-profit-loss h3 {
+    font-size: 1rem;
+  }
+}
