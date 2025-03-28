@@ -6,11 +6,11 @@ const api = axios.create({
 });
 
 export const loginUser = async (username, password) => {
-  return api.post("/login", { username, password });
+  return api.post("/auth/login", { username, password });
 };
 
 export const registerUser = async (username, password) => {
-  return api.post("/register", { username, password });
+  return api.post("/auth/register", { username, password });
 };
 
 export const fetchPortfolio = async (token) => {
