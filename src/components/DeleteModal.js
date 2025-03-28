@@ -8,16 +8,22 @@ const DeleteModal = ({ deleteModal, setDeleteModal, deleteTransaction }) => {
     <div className="modal" style={{ zIndex: 1100 }}>
       <div className="modal-content">
         <h2>Подтвердить удаление транзакции?</h2>
-        <button
-          onClick={() => deleteTransaction(deleteModal.coin, deleteModal.id)}
-        >
-          <FaCheck /> Да
-        </button>
-        <button
-          onClick={() => setDeleteModal({ isOpen: false, coin: "", id: null })}
-        >
-          <FaTimes /> Нет
-        </button>
+
+        <div className="modal-buttons">
+          <button
+            onClick={() => deleteTransaction(deleteModal.coin, deleteModal.id)}
+          >
+            <FaCheck /> Да
+          </button>
+
+          <button
+            onClick={() =>
+              setDeleteModal({ isOpen: false, coin: "", id: null })
+            }
+          >
+            <FaTimes /> Нет
+          </button>
+        </div>
       </div>
     </div>
   );

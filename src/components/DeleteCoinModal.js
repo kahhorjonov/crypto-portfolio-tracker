@@ -12,12 +12,17 @@ const DeleteCoinModal = ({
     <div className="modal" style={{ zIndex: 1100 }}>
       <div className="modal-content">
         <h2>Подтвердить удаление монеты {deleteCoinModal.coin}?</h2>
-        <button onClick={() => removeCoin(deleteCoinModal.coin)}>
-          <FaCheck /> Да
-        </button>
-        <button onClick={() => setDeleteCoinModal({ isOpen: false, coin: "" })}>
-          <FaTimes /> Нет
-        </button>
+
+        <div className="modal-buttons">
+          <button onClick={() => removeCoin(deleteCoinModal.coin)}>
+            <FaCheck /> Да
+          </button>
+          <button
+            onClick={() => setDeleteCoinModal({ isOpen: false, coin: "" })}
+          >
+            <FaTimes /> Нет
+          </button>
+        </div>
       </div>
     </div>
   );

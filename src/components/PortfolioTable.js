@@ -44,13 +44,13 @@ const PortfolioTable = ({
             return (
               <tr key={coin}>
                 <td>{coin}</td>
-                <td>{currentQuantity.toFixed(4)}</td>
-                <td>{avgPrice.toFixed(4)}</td>
-                <td>{currentPrice.toFixed(4)}</td>
+                <td>{currentQuantity?.toFixed(5)}</td>
+                <td>{avgPrice?.toFixed(2)}</td>
+                <td>{currentPrice?.toFixed(2)}</td>
                 <td>
                   <p className={profitLoss >= 0 ? "profit" : "loss"}>
                     {profitLoss >= 0 ? <FaCheck /> : <FaTimes />}
-                    {profitLoss.toFixed(4)} USDT
+                    {profitLoss?.toFixed(2)} USDT
                   </p>
                 </td>
                 <td>
@@ -109,7 +109,7 @@ const PortfolioTable = ({
           Общая Прибыль/Убыток:
           <span className={calculateTotalProfitLoss() >= 0 ? "profit" : "loss"}>
             {calculateTotalProfitLoss() >= 0 ? <FaCheck /> : <FaTimes />}
-            {calculateTotalProfitLoss().toFixed(4)} USDT
+            {calculateTotalProfitLoss()?.toFixed(2)} USDT
           </span>
         </h3>
       </div>

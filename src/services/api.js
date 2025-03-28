@@ -54,7 +54,7 @@ export const deleteTransaction = async (coin, id, token) => {
 
 export const addCoin = async (symbol, token) => {
   return api.post(
-    "/add-coin",
+    "/portfolio/add-coin",
     { symbol },
     {
       headers: { Authorization: `Bearer ${token}` },
@@ -63,7 +63,7 @@ export const addCoin = async (symbol, token) => {
 };
 
 export const removeCoin = async (symbol, token) => {
-  return api.delete(`/remove-coin/${symbol}`, {
+  return api.delete(`/portfolio/remove-coin/${symbol}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 };

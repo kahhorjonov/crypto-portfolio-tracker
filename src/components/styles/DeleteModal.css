@@ -29,6 +29,13 @@
 
 .modal-content button {
   margin: 10px;
+  color: black;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
